@@ -2,6 +2,7 @@ let lin = 8;
 let col = 7;
 let total = lin * col;
 
+
 class brick {
   constructor(x, y, w, h, color) {
     this.x = x;
@@ -44,9 +45,19 @@ function bricksArray() {
 }
 
 function drawBricks() {
+  let newBricks = [];
   for (let i = 0; i < total; i++) {
-    bricks[i].display();
+    if (!bricks[i].hit) {
+      bricks[i].display();
+      newBricks.push(bricks[i]);
+    }
+  }
+  bricks = newBricks;
+  total = bricks.length; // Atualiza o número total de tijolos
+
+  // Se o número total de tijolos for zero, o jogador ganha
+  if(total == 0){
+    alert("Você ganhou!");
+    document.location.reload();
   }
 }
-
-

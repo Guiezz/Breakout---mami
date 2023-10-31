@@ -7,11 +7,13 @@ let canvasHeight = 400;
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
   bricksArray()
+
 }
 
 
 function draw() {
-  background(220);
+  background(125);
+
   drawBricks()
   colisao();
   player.play();
@@ -22,4 +24,5 @@ function draw() {
   ellipse(ball.x, ball.y, ball.r, ball.r);
   ball.play();
 
+ 
 }
