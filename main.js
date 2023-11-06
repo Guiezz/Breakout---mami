@@ -4,7 +4,16 @@
 // Variáveis do jogo
 let canvasWidth = 600;
 let canvasHeight = 400;
+
+let imgPlayer, imgBall;
+
+function preload(){
+  imgPlayer = loadImage('assets/plataforma.png')
+  imgBall = loadImage('assets/bolinha.png')
+}
+
 function setup() {
+  noStroke()
   createCanvas(canvasWidth, canvasHeight);
   bricksArray()
 
@@ -19,10 +28,10 @@ function draw() {
   player.play();
   fill(255)
   rectMode(CORNER)
-  rect(player.x, player.y, player.w, player.h);
+  image(imgPlayer,player.x, player.y, player.w, player.h);
   fill(255)
-  ellipse(ball.x, ball.y, ball.r, ball.r);
+  image(imgBall,ball.x, ball.y, ball.r, ball.r);
   ball.play();
-
- 
+  points()
+  lifePoints()
 }

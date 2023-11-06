@@ -3,6 +3,7 @@ let col = 7;
 let total = lin * col;
 
 
+
 class brick {
   constructor(x, y, w, h, color) {
     this.x = x;
@@ -34,7 +35,7 @@ function bricksArray() {
       bricks.push(
         new brick(
           i * (50 + 15) + 70,
-          j * (20 + 5) + 25,
+          j * (20 + 5) + 70,
           50,
           20,
           color(random(255), random(255), random(255))
@@ -54,10 +55,6 @@ function drawBricks() {
   }
   bricks = newBricks;
   total = bricks.length; // Atualiza o número total de tijolos
-
-  // Se o número total de tijolos for zero, o jogador ganha
-  if(total == 0){
-    alert("Você ganhou!");
-    document.location.reload();
-  }
 }
+
+

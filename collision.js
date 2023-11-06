@@ -22,14 +22,15 @@ function colisao() {
   ) {
     ball.speedY *= -1;
   }
-  // colisao chao (perdeu)
-  /*
+
+  // colisao chao (- 1 vida)
+  
   if(ball.y >= canvasHeight){
-    alert("perdeu");
+    life--;
     ball.x = canvasWidth / 2;
     ball.y = canvasHeight / 2;
   }
-  */
+  
 
   // colisao tijolos 
 

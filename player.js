@@ -1,8 +1,8 @@
 let player = {
   x: canvasWidth / 2 - 50,
   y: canvasHeight - 20,
-  w: 50,
-  h: 5,
+  w: 64,
+  h: 20,
 
   play: function () {
     if (keyIsDown(LEFT_ARROW)) {
