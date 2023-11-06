@@ -1,12 +1,12 @@
 function colisao() {
-  //colisao player
+  //colisao player e parede
   if (player.x <= 0) {
     player.x = 0;
   }
   if (player.x >= canvasWidth - player.w) {
     player.x = canvasWidth - player.w;
   }
-  // colisao bola
+  // colisao bola e parede
   if (ball.x <= 0 || ball.x >= canvasWidth) {
     ball.speedX *= -1;
   }
@@ -20,9 +20,10 @@ function colisao() {
     ball.y >= player.y &&
     ball.y <= player.y + player.h
   ) {
-    ball.speedY *= -1;
+    if (ball.speedY > 0) {
+      ball.speedY *= -1;
+    }
   }
-
   // colisao chao (- 1 vida)
   
   if(ball.y >= canvasHeight){
@@ -30,6 +31,8 @@ function colisao() {
     ball.x = canvasWidth / 2;
     ball.y = canvasHeight / 2;
   }
+
+  
   
 
   // colisao tijolos 

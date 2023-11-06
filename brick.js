@@ -53,7 +53,7 @@ function drawBricks() {
       newBricks.push(bricks[i]);
     }
   }
-  bricks = newBricks;
+  bricks = newBricks; // Atualiza o array de tijolos
   total = bricks.length; // Atualiza o número total de tijolos
 }
 

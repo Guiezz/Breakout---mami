@@ -1,6 +1,6 @@
 let player = {
   x: canvasWidth / 2 - 50,
-  y: canvasHeight - 20,
+  y: canvasHeight - 30,
   w: 64,
   h: 20,
 
