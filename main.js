@@ -35,3 +35,6 @@ function draw() {
   points()
   lifePoints()
 }
+
+
+

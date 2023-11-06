@@ -20,14 +20,13 @@ function colisao() {
     ball.y >= player.y &&
     ball.y <= player.y + player.h
   ) {
-    if (ball.speedY > 0) {
       ball.speedY *= -1;
-    }
   }
   // colisao chao (- 1 vida)
   
   if(ball.y >= canvasHeight){
     life--;
+    jogando = false;
     ball.x = canvasWidth / 2;
     ball.y = canvasHeight / 2;
   }

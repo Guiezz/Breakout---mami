@@ -1,5 +1,5 @@
-let lin = 8;
-let col = 7;
+let lin = 1;
+let col = 1;
 let total = lin * col;
 
 

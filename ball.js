@@ -1,15 +1,26 @@
+let jogando = false;
+
 let ball = {
+  x: player.x + player.w / 2,
+  y: player.y - 10,
+  r: 10,
 
-    x: canvasWidth / 2,
-    y: canvasHeight / 2,
-    r: 10,
+  speedX: 5,
+  speedY: 5,
 
-    speedX : 5,
-    speedY : 5,
-
-    play: function () {
-        this.x += this.speedX;
-        this.y += this.speedY;
+  play: function () {
+    if (jogando == false) {
+      ball.x = player.x + player.w / 2;
+      ball.y = player.y - 10;
     }
 
-}
+    if(keyIsDown(32)){
+      jogando = true;
+    }
+    
+    if (jogando == true) {
+      ball.x += this.speedX;
+      ball.y -= this.speedY;
+    }
+  },
+};
