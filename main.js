@@ -5,11 +5,12 @@
 let canvasWidth = 600;
 let canvasHeight = 400;
 
-let imgPlayer, imgBall;
+let imgPlayer, imgBall, imgBrick;
 
 function preload(){
   imgPlayer = loadImage('assets/plataforma.png')
   imgBall = loadImage('assets/bolinha.png')
+  imgBrick = loadImage('assets/vermelho.png')
 }
 
 function setup() {
@@ -27,7 +28,7 @@ function draw() {
   colisao();
   player.play();
   fill(255)
-  rectMode(CORNER)
+  imageMode(CORNER)
   image(imgPlayer,player.x, player.y, player.w, player.h);
   fill(255)
   image(imgBall,ball.x, ball.y, ball.r, ball.r);

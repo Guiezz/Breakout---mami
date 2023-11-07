@@ -1,16 +1,15 @@
-let lin = 1;
-let col = 1;
+let lin = 8;
+let col = 7;
 let total = lin * col;
 
 
 
 class brick {
-  constructor(x, y, w, h, color) {
+  constructor(x, y, w, h ) {
     this.x = x;
     this.y = y;
     this.w = w;
     this.h = h;
-    this.color = color;
     this.hit = false;
   }
   brick(vx, vy, vw, vh) {
@@ -21,9 +20,8 @@ class brick {
     hit = false;
   }
   display() {
-    fill(this.color);
-    rectMode(CENTER);
-    rect(this.x, this.y, this.w, this.h);
+    imageMode(CENTER);
+    image(imgBrick,this.x, this.y, this.w, this.h);
   }
 }
 
@@ -38,7 +36,6 @@ function bricksArray() {
           j * (20 + 5) + 70,
           50,
           20,
-          color(random(255), random(255), random(255))
         )
       );
     }
