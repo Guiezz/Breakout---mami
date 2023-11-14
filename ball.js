@@ -10,8 +10,8 @@ let ball = {
 
   play: function () {
     if (jogando == false) {
-      ball.x = player.x + player.w / 2;
-      ball.y = player.y - 10;
+      ball.x = player.x + player.w / 2 - 5;
+      ball.y = player.y - 8;
     }
 
     if(keyIsDown(32)){
