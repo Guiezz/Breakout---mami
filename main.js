@@ -7,35 +7,30 @@ let canvasHeight = 400;
 
 let imgPlayer, imgBall, imgBrick;
 
-function preload(){
-  imgPlayer = loadImage('assets/plataforma.png')
-  imgBall = loadImage('assets/bolinha.png')
-  imgBrick = loadImage('assets/vermelho.png')
+function preload() {
+  imgPlayer = loadImage("assets/plataforma.png");
+  imgBall = loadImage("assets/bolinha.png");
+  imgBrick = loadImage("assets/vermelho.png");
 }
 
 function setup() {
-  noStroke()
+  noStroke();
   createCanvas(canvasWidth, canvasHeight);
-  bricksArray()
-
+  bricksArray();
 }
-
 
 function draw() {
   background(125);
 
-  drawBricks()
+  drawBricks();
   colisao();
   player.play();
-  fill(255)
-  imageMode(CORNER)
-  image(imgPlayer,player.x, player.y, player.w, player.h);
-  fill(255)
-  image(imgBall,ball.x, ball.y, ball.r, ball.r);
+  fill(255);
+  imageMode(CORNER);
+  image(imgPlayer, player.x, player.y, player.w, player.h);
+  fill(255);
+  image(imgBall, ball.x, ball.y, ball.r, ball.r);
   ball.play();
-  points()
-  lifePoints()
+  points();
+  lifePoints();
 }
-
-
-
